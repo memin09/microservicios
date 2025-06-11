@@ -5,8 +5,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/memin09/config-server.git
+          uri: https://github.com/memin09/microservicios.git
           searchPaths: configurations
           username: benjamincastaneda783@gmail.com
-          password:
-
+          password: Benjacas9
+server:
+  port: 8888
