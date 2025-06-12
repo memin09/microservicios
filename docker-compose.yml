@@ -12,25 +12,6 @@ services:
       - 3307:3306
     networks:
       - microservices
-  discovery:
-    build: ./services/discovery
-    ports:
-      - 8761:8761
-    depends_on:
-      - config-server
-    networks:
-      - microservices
-
-  customer-service:
-    build: ./services/customer
-    ports:
-      - 8090:8090
-    depends_on:
-      - config-server
-      - db
-    networks:
-      - microservices
-
   config-server:
     build: ./services/config-server
     ports:
