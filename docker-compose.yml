@@ -19,7 +19,7 @@ services:
     networks:
       - microservices
   discovery:
-    build: ./service/discovery
+    build: ./services/discovery
     ports:
       - 8761:8761
     depends_on:
