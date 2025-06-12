@@ -16,6 +16,8 @@ services:
     build: ./services/discovery
     ports:
       - 8761:8761
+    depends_on:
+      - config-server
     networks:
       - microservices
 
@@ -23,6 +25,9 @@ services:
     build: ./services/customer
     ports:
       - 8090:8090
+    depends_on:
+      - config-server
+      - db
     networks:
       - microservices
 

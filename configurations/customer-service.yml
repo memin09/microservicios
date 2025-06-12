@@ -7,7 +7,7 @@ spring:
   datasource:
     username: benja
     password: 123
-    url: jdbc:mysql://mysql:3306/customer?serverTimezone=UTC
+    url: jdbc:mysql://db:3307/customer?serverTimezone=UTC
 eureka:
   client:
     serviceUrl:
