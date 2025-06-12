@@ -5,8 +5,8 @@ spring:
     hibernate:
       ddlAuto: update
   datasource:
-    username: root
-    password:
+    username: benja
+    password: 123
     url: jdbc:mysql://localhost:3307/customer?serverTimezone=UTC
 eureka:
   client:
