@@ -1,6 +1,7 @@
 
 services:
-  db:
+  mysql:
+    container_name: mysql
     image: mysql
     restart: always
     environment:
@@ -13,6 +14,7 @@ services:
     networks:
       - microservices
   config-server:
+    container_name: config-server
     build: ./services/config-server
     ports:
       - 8888:8888
