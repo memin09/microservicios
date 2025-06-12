@@ -1,7 +1,6 @@
 package com.microservices.customer.customer;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails;
 
@@ -17,5 +16,6 @@ public class Customer {
     private String firstname;
     private String lastname;
     private String email;
+    @OneToOne(cascade = CascadeType.ALL)
     private Addres addres;
 }

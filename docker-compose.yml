@@ -1,5 +1,4 @@
 
-version: '3.8'
 services:
   db:
     image: mysql
@@ -14,24 +13,24 @@ services:
     networks:
       - microservices
   discovery:
-    build: discovery
+    build: ./services/discovery
     ports:
       - 8761:8761
     networks:
       - microservices
 
   customer-service:
-    build: customer-service
+    build: ./services/customer
     ports:
       - 8090:8090
     networks:
       - microservices
 
   config-server:
-    build: config-server
+    build: ./services/config-server
     ports:
       - 8888:8888
     networks:
       - microservices
 networks:
-  microservices
+  microservices:

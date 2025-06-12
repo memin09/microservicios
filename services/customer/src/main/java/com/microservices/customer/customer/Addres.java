@@ -1,6 +1,6 @@
 package com.microservices.customer.customer;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
@@ -10,6 +10,9 @@ import lombok.*;
 @Builder
 @Entity
 public class Addres {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   private Long id;
     private String street;
     private String houseNumber;
     private String zipCode;

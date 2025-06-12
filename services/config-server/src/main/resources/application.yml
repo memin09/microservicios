@@ -9,5 +9,7 @@ spring:
           searchPaths: configurations
           username: benjamincastaneda783@gmail.com
           password: Benjacas9
+          default-label: master
+
 server:
   port: 8888
