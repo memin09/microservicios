@@ -18,5 +18,13 @@ services:
       - 8888:8888
     networks:
       - microservices
+  discovery:
+    build: ./service/discovery
+    ports:
+      - 8761:8761
+    depends_on:
+      - config-server
+    networks:
+      - microservices
 networks:
   microservices:
