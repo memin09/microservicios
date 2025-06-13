@@ -10,6 +10,21 @@ spring:
           username: benjamincastaneda783@gmail.com
           password: Benjacas9
           default-label: master
+          force-pull: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+  health:
+    config:
+      enabled: false
 
 server:
   port: 8888
