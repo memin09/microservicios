@@ -12,7 +12,7 @@ services:
     ports:
       - "3307:3306"
     networks:
-      - microservices
+      - 'microservices'
 
   config-server:
     container_name: config-server
@@ -20,7 +20,7 @@ services:
     ports:
       - "8888:8888"
     networks:
-      - microservices
+      - 'microservices'
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8888/actuator/health"]
       interval: 30s
@@ -36,7 +36,7 @@ services:
       config-server:
         condition: service_healthy
     networks:
-      - microservices
+      - 'microservices'
 
 networks:
   microservices:
