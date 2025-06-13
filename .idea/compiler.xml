@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
-        <module name="discovery" />
+        <module name="eureka" />
       </profile>
       <profile name="Annotation profile for customer" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -22,6 +22,7 @@
     <bytecodeTargetLevel>
       <module name="consumer" target="17" />
       <module name="cunsomer" target="17" />
+      <module name="discovery" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -31,6 +32,7 @@
       <module name="cunsomer" options="-parameters" />
       <module name="customer" options="-parameters" />
       <module name="discovery" options="-parameters" />
+      <module name="eureka" options="-parameters" />
     </option>
   </component>
 </project>
