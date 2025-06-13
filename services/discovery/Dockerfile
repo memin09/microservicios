@@ -1,4 +1,4 @@
 FROM openjdk:17-jdk-slim
-ARG JAR_FILE=target/discovery-0.0.1.jar
-COPY ${JAR_FILE} app_discovery.jar
-ENTRYPOINT ["java","-jar","app_discovery.jar"]
+ARG JAR_FILE=target/eureka-sv-0.0.1.jar
+COPY ${JAR_FILE} app_eureka.jar
+ENTRYPOINT ["java", "-jar", "app_eureka.jar"]
